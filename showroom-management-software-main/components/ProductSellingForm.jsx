@@ -88,12 +88,6 @@ export default function CreateFeesForm({ data }) {
           }
         );
 
-        if (sellingType == "due") {
-          await axios.get(
-            `https://217.172.190.215/sendtext?apikey=03854268308a8463&secretkey=57ac39da&callerID=123456&toUser=${customerPhone}&messageContent=Your today's due from  Kantydey's shop is: ${totalAmount} tk`
-          );
-        }
-
         setOpen(false);
         if (data == "Payment saved successfully") {
           Swal.fire("Success", data, "success").then((result) => {
